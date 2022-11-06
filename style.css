@@ -56,6 +56,10 @@ section {
 }
 
 .image {
+  display: none;
+}
+
+.image.current {
   display: block;
 }
 
