@@ -31,7 +31,7 @@ section {
 .outer-box {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
   margin-bottom: 25px;
 }
 
@@ -50,8 +50,8 @@ section {
 .slideshow img {
   transition: all 300ms ease-in-out;
   border-radius: 30px;
-  width: 800px;
-  height: 500px;
+  width: 52vw;
+  height: 60vh;
 }
 
 .hidden {
@@ -171,4 +171,30 @@ section {
 .right-btn img:active,
 .dot:active {
   transform: scale(1, 1);
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    margin-top: 10vh;
+  }
+
+  section {
+    margin: 0;
+  }
+
+  .slideshow img {
+    width: 74vw;
+    height: 30vh;
+  }
+
+  .right-btn > img,
+  .left-btn > img {
+    width: 6vw;
+    height: 6vh;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
 }
