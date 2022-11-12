@@ -35,27 +35,26 @@ section {
   margin-bottom: 25px;
 }
 
-.outer-box > img {
+.right-btn > img,
+.left-btn > img {
   width: 40px;
   height: 40px;
   cursor: pointer;
 }
 
-.outer-box > img:first-child {
-  transform: rotate(90deg);
-}
-
-.outer-box > img:last-child {
-  transform: rotate(-90deg);
+.left-btn img,
+.right-btn img {
+  transition: all 0.2s ease;
 }
 
 .slideshow img {
+  transition: all 300ms ease-in-out;
   border-radius: 30px;
   width: 800px;
   height: 500px;
 }
 
-.image {
+.hidden {
   display: none;
 }
 
@@ -75,6 +74,7 @@ section {
   opacity: 0.3;
   border-radius: 100%;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .addCurrent {
@@ -83,6 +83,10 @@ section {
 
 .removeCurrent {
   animation: btn-fade-out 700ms forwards;
+}
+
+.visual {
+  opacity: 0;
 }
 
 .fadeIn {
@@ -136,10 +140,14 @@ section {
 }
 
 @keyframes fade-in {
-  from {
+  0% {
+    display: none;
+  }
+  1% {
+    display: block;
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -151,4 +159,16 @@ section {
   to {
     opacity: 0;
   }
+}
+
+.left-btn img:hover,
+.right-btn img:hover,
+.dot:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.left-btn img:active,
+.right-btn img:active,
+.dot:active {
+  transform: scale(1, 1);
 }
