@@ -1,3 +1,3 @@
 # Live Preview
 
-## 👉 [Here](https://foxysamu.github.io/image-carousel/)
+## 👉 [Here](https://gabe563.github.io/image-carousel/)
